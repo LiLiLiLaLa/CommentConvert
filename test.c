@@ -12,8 +12,9 @@ void test()
 	}
 	if (pFOut == NULL)
 	{
-
+		perror("open file for read.");
 	}
+	CommentConver(pFIn, pFOut);
 }
 
 int main(void)
