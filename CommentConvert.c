@@ -1,6 +1,6 @@
 #include "CommentConvert.h"
 
-void DoNulState(FILE *pfIn, FILE *pfOut, enum State *ps)
+void DoNulState(FILE  *pfIn, FILE *pfOut, enum State *ps)
 {
 	int first = fgetc(pfIn);//¶ÁÈ¡Ò»¸ö×Ö·û
 	switch (first)
