@@ -1,14 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+
 #include "CommentConvert.h"
 
 void test()
 {
-	FILE* pFIn = fopen("input.c", "r");//¶Áinput.cÎÄ¼þ
-	FILE* pFOut = fopen("output.c", "w");//Ð´³ö
+	FILE* pFIn = fopen("input.c", "r");//è¯»input.cæ–‡ä»¶
+	FILE* pFOut = fopen("output.c", "w");//å†™å‡º
 	if (NULL == pFIn)
 	{
-		perror("open file for read.");//Èç¹ûÎÄ¼þÄÚÈÝÎª¿ÕÔò±¨´í
+		perror("open file for read.");//å¦‚æžœæ–‡ä»¶å†…å®¹ä¸ºç©ºåˆ™æŠ¥é”™
 	}
 	if (pFOut == NULL)
 	{
