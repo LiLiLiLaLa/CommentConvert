@@ -2,9 +2,10 @@
 
 void DoNulState(FILE *pfIn, FILE *pfOut, enum State *ps)
 {
-	int first = fgetc(pfIn);//¶ÁÈ¡Ò»¸ö×Ö·û
+	int first = fgetc(pfIn);//è¯»å–ä¸€ä¸ªå­—ç¬¦
 	switch (first)
 	{
+			
 	case '/':
 	{
 		int second = fgetc(pfIn);
@@ -33,7 +34,7 @@ void DoNulState(FILE *pfIn, FILE *pfOut, enum State *ps)
 		}
 	}
 		break;
-	case EOF://¶Áµ½ÎÄ¼ş½áÊø
+	case EOF://è¯»åˆ°æ–‡ä»¶ç»“æŸ
 	{
 		fputc(first, pfOut);
 		*ps = END_STATE;
@@ -65,10 +66,10 @@ void DoCState(FILE *pfIn, FILE *pfOut, enum State *ps)
 			{
 				fputc(third, pfOut);
 			}
-			else//²»ÊÇ»»ĞĞ·ûÔòÊÖ¶¯Ìí¼Ó»»ĞĞ·û
+			else//ä¸æ˜¯æ¢è¡Œç¬¦åˆ™æ‰‹åŠ¨æ·»åŠ æ¢è¡Œç¬¦
 			{
 				fputc('\n', pfOut);
-				ungetc(third, pfIn);//°Ñ½«À´×öÅĞ¶ÏµÄ×Ö·ûËÍ»ØÁ÷ÖĞ
+				ungetc(third, pfIn);//æŠŠå°†æ¥åšåˆ¤æ–­çš„å­—ç¬¦é€å›æµä¸­
 			}
 			*ps = NUL_STATE;
 		}
@@ -116,7 +117,7 @@ void DoCppState(FILE *pfIn, FILE *pfOut, enum State *ps)
 
 void CommentConver(FILE *pfIn, FILE *pfOut)
 {
-	enum State state = NUL_STATE;//×î¿ªÊ¼¸Õ½øÈëinputÎÄ¼ş¶¨ÒåÎªÎŞ×´Ì¬
+	enum State state = NUL_STATE;//æœ€å¼€å§‹åˆšè¿›å…¥inputæ–‡ä»¶å®šä¹‰ä¸ºæ— çŠ¶æ€
 	while (state != END_STATE)
 	{
 		switch (state)
