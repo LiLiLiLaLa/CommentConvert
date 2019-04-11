@@ -7,13 +7,14 @@
 #include <Windows.h>
 
 enum State{
-	NUL_STATE, //��ע��״̬
-	C_STATE, //Cע��״̬
-	CPP_STATE,//C++ע��״̬
-	END_STATE, //����״̬
+	NUL_STATE, //ÎŢ×˘ĘÍ×´ĚŹ
+	C_STATE, //C×˘ĘÍ×´ĚŹ
+	CPP_STATE,//C++×˘ĘÍ×´ĚŹ
+	END_STATE, //˝áĘř×´ĚŹ
 };
 
 void CommentConver(FILE *pfIn, FILE *pfOut);
+
 
 void DoNulState(FILE *pfIn, FILE *pfOut, enum State *ps);
 void DoCState(FILE *pfIn, FILE *pfOut, enum State *ps);
