@@ -6,6 +6,7 @@
 #include<assert.h>
 #include <Windows.h>
 
+
 enum State{
 	NUL_STATE, //ÎŢ×˘ĘÍ×´ĚŹ
 	C_STATE, //C×˘ĘÍ×´ĚŹ
